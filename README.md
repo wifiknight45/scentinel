@@ -1,24 +1,12 @@
 # scentinel
 cybersec def toolkit
 
-DISCLAIMER
-──────────
+### disclaimer 
 Use Scentinel only against systems you own or have explicit
 written permission to test. The author assumes no liability for misuse. 
-For ethical usage only por favor. 
+For ethical usage; do no harm. 
  
- 
-ABOUT
-─────
-Scentinel is a sweet modular defensive cybersecurity
-reconnaissance toolkit written in Python 3.10+. Designed for
-authorised security assessments, penetration test recon phases,
-and general network/web hygiene audits. Every module is fully
-self-contained and can be used standalone or as a library.
- 
- 
-FEATURES
-────────
+ ## dope features 
   1. Multithreaded Port Scanner
        Concurrent TCP connect scan across common or custom ports.
        Automatically identifies well-known services by port number.
@@ -57,8 +45,7 @@ FEATURES
        their resolved IP addresses.
  
  
-PROJECT STRUCTURE
-─────────────────
+### project structure (may not adhere to this) caveat emptor
   scentinel/
   ├── scentinel.py            ← Main CLI entry point (run this)
   ├── __init__.py             ← Package metadata & version
@@ -75,8 +62,8 @@ PROJECT STRUCTURE
       └── subdomain_enum.py   ← Subdomain enumeration
  
  
-REQUIREMENTS
-────────────
+## reqs
+
   Python 3.10 or higher.
  
   Dependencies (see requirements.txt):
@@ -89,13 +76,13 @@ REQUIREMENTS
     urllib3         HTTP connection pooling
  
  
-INSTALLATION
-────────────
+## installation guide
+
   1. Clone the repository:
        git clone https://github.com/wifiknight45/scentinel.git
        cd scentinel
  
-  2. (Recommended) Create a virtual environment:
+  2. Create a virtual environment (all the cool kids do):
        python3 -m venv venv
        source venv/bin/activate        # Linux / macOS
        venv\Scripts\activate.bat       # Windows
@@ -107,16 +94,16 @@ INSTALLATION
        chmod +x scentinel.py
  
  
-USAGE
-─────
+## usage 
+
   # Run directly from bash
-  ./scentinel.py --target <host/domain/url> [OPTIONS]
+  ./scentinel.py --target <host/domain/url>
  
   # Or via Python
-  python3 scentinel.py --target <host/domain/url> [OPTIONS]
+  python3 scentinel.py --target <host/domain/url> 
  
   Arguments:
-    --target, -t    Target host, domain, or URL  [REQUIRED]
+    --target, -t    Target host, domain, or URL  
  
   Module flags (combine freely):
     --all, -a       Run all modules (default when no flag given)
@@ -134,9 +121,7 @@ USAGE
     --timeout       Per-connection timeout seconds (default: 1.0)
     --ssl-port      TLS port to inspect (default: 443)
  
- 
-EXAMPLES
-────────
+ ## examples 
   # Full scan
   ./scentinel.py --target example.com --all
  
@@ -152,26 +137,5 @@ EXAMPLES
   # DNS recon + WHOIS together
   ./scentinel.py --target example.com --dns --whois
  
- 
-USING MODULES AS A LIBRARY
-───────────────────────────
-  Each module exposes a primary function and a display() helper:
- 
-    from modules import port_scanner, ssl_inspector, dns_recon
- 
-    # Port scan
-    open_ports = port_scanner.scan("example.com", threads=50)
-    port_scanner.display(open_ports, "example.com")
- 
-    # SSL inspection
-    cert = ssl_inspector.inspect("example.com")
-    ssl_inspector.display(cert, "example.com")
- 
-    # DNS recon
-    records = dns_recon.recon("example.com")
-    dns_recon.display(records, "example.com")
- 
-  All functions return plain Python dicts/lists — easy to pipe
-  into reports, CI checks, or custom tooling.
  
  
