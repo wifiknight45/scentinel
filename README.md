@@ -12,7 +12,26 @@ cybersec def toolkit
 Use Scentinel only against systems you own or have explicit
 written permission to test. The author assumes no liability for misuse. 
 For ethical usage; do no harm. 
- 
+
+ ```mermaid
+flowchart TD
+  ROOT[" scentinel"]
+
+  ROOT --> RUN(" scentinel.py · run this")
+  ROOT --> META("__init__.py · version & metadata")
+  ROOT --> REQS("requirements.txt · dependencies")
+  ROOT --> DOCS("README.txt · documentation")
+
+  ROOT --> MOD[" modules"]
+
+  MOD --> m1("port_scanner.py · multithreaded TCP scan")
+  MOD --> m2("whois_lookup.py · registrar & domain info")
+  MOD --> m3("dns_recon.py · A, MX, NS, TXT records")
+  MOD --> m4("ssl_inspector.py · cert & TLS inspection")
+  MOD --> m5("http_headers.py · security header scoring")
+  MOD --> m6("vuln_fingerprint.py · banner & version matching")
+  MOD --> m7("subdomain_enum.py · brute-force DNS enum")
+```
  ## dope features 
   1. Multithreaded Port Scanner
        Concurrent TCP connect scan across common or custom ports.
