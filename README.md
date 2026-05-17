@@ -1,6 +1,6 @@
 ![version](https://img.shields.io/badge/version-1.0.0-7F77DD?style=for-the-badge&logo=python&logoColor=white)
 ![license](https://img.shields.io/badge/license-MIT-1D9E75?style=for-the-badge&logo=opensourceinitiative&logoColor=white)
-![python](https://img.shields.io/badge/python-3.8+-378ADD?style=for-the-badge&logo=python&logoColor=white)
+![python](https://img.shields.io/badge/python-3.10+-378ADD?style=for-the-badge&logo=python&logoColor=white)
 ![purpose](https://img.shields.io/badge/purpose-defensive%20security-D85A30?style=for-the-badge&logo=shield&logoColor=white)
 ![modules](https://img.shields.io/badge/modules-7-D4537E?style=for-the-badge&logo=files&logoColor=white)
 ![ethical use](https://img.shields.io/badge/use-ethical%20only-BA7517?style=for-the-badge&logo=checkmarx&logoColor=white)
