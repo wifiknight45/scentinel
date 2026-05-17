@@ -50,25 +50,8 @@ For ethical usage; do no harm.
        DNS brute-force using a built-in 80+ word wordlist.
        Resolves each candidate and reports live subdomains with
        their resolved IP addresses.
- 
- 
-### project structure (may not adhere to this) caveat emptor
-  scentinel/
-  ├── scentinel.py            ← Main CLI entry point (run this)
-  ├── __init__.py             ← Package metadata & version
-  ├── requirements.txt        ← Python dependencies
-  ├── README.txt              ← This file
-  └── modules/
-      ├── __init__.py
-      ├── port_scanner.py     ← Multithreaded port scanner
-      ├── whois_lookup.py     ← WHOIS lookup
-      ├── dns_recon.py        ← DNS reconnaissance
-      ├── ssl_inspector.py    ← SSL/TLS certificate inspection
-      ├── http_headers.py     ← HTTP header analysis & security fingerprinting
-      ├── vuln_fingerprint.py ← Vulnerability fingerprinting
-      └── subdomain_enum.py   ← Subdomain enumeration
- 
- 
+
+      
 ## reqs
 
   Python 3.10 or higher.
@@ -87,17 +70,18 @@ For ethical usage; do no harm.
 
   1. Clone the repository:
        git clone https://github.com/wifiknight45/scentinel.git
+     
        cd scentinel
  
-  2. Create a virtual environment (all the cool kids do):
+  3. Create a virtual environment (all the cool kids do):
        python3 -m venv venv
        source venv/bin/activate        # Linux / macOS
        venv\Scripts\activate.bat       # Windows
  
-  3. Install dependencies:
+  4. Install dependencies:
        pip install -r requirements.txt
  
-  4. Make executable (Linux / macOS):
+  5. Make executable (Linux / macOS):
        chmod +x scentinel.py
  
  
@@ -144,5 +128,19 @@ For ethical usage; do no harm.
   # DNS recon + WHOIS together
   ./scentinel.py --target example.com --dns --whois
  
- 
+ ### project structure (may not adhere to this) caveat emptor
+  scentinel/
+  ├── scentinel.py            ← Main CLI entry point (run this)
+  ├── __init__.py             ← Package metadata & version
+  ├── requirements.txt        ← Python dependencies
+  ├── README.txt              ← This file
+  └── modules/
+      ├── __init__.py
+      ├── port_scanner.py     ← Multithreaded port scanner
+      ├── whois_lookup.py     ← WHOIS lookup
+      ├── dns_recon.py        ← DNS reconnaissance
+      ├── ssl_inspector.py    ← SSL/TLS certificate inspection
+      ├── http_headers.py     ← HTTP header analysis & security fingerprinting
+      ├── vuln_fingerprint.py ← Vulnerability fingerprinting
+      └── subdomain_enum.py   ← Subdomain enumeration
  
